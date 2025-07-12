@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mockData.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Employee Directory</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by name or email">
+            <button onclick="applySearch()">Filter</button>
+        </div>
+    </header>
+    <div class="controls">
+        <select id="sortSelect" onchange="applySort()">
+            <option value="">--Select--</option>
+            <option value="firstName">First Name</option>
+            <option value="department">Department</option>
+        </select>
+        <select id="paginationSelect" onchange="changePageSize()">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <button onclick="showFilterSidebar()">Filter</button>
+        <button onclick="openForm()">Add Employee</button>
+    </div>
+    <div class="main">
+        <div id="employeeList" class="employee-list"></div>
+        <aside id="filterSidebar" class="sidebar hidden">
+            <h2>Filter Employees</h2>
+            <label>First Name: <input type="text" id="filterFirstName"></label>
+            <label>Department: <input type="text" id="filterDepartment"></label>
+            <label>Role: <input type="text" id="filterRole"></label>
+            <button onclick="applyFilters()">Apply</button>
+            <button onclick="resetFilters()">Reset</button>
+        </aside>
+    </div>
+    <footer>&copy; 2025 Employee Directory App. All rights reserved.</footer>
+    <div class="modal" id="employeeFormModal">
+        <script src="mockData.js" defer></script>
+        <script src="script.js" defer></script>
+
+    <div class="form-container">
+        <h2 id="formTitle">Add Employee</h2>
+        <label>First name <input type="text" id="firstName"></label>
+        <label>Last name <input type="text" id="lastName"></label>
+        <label>Email <input type="email" id="email"></label>
+        <label>Department <input type="text" id="department"></label>
+        <label>Role <input type="text" id="role"></label>
+        <div class="form-actions">
+            <button onclick="closeForm()">Cancel</button>
+            <button onclick="submitForm()">Add</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

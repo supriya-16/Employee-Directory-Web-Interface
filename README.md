@@ -1,4 +1,5 @@
-# Employee-Directory-Web-Interface
+
+# Employee Directory Web App
 
 ## Overview
 This is a frontend-only application to manage employee records using HTML, CSS, JavaScript, and Freemarker templating.
@@ -17,7 +18,7 @@ This is a frontend-only application to manage employee records using HTML, CSS, 
    ```bash
    npx serve .
    ```
-4. Open `index.html` in your browser.
+4. Open `index.ftl` in your browser.
 
 ## Mock Data
 Data is stored in memory in `mockData.js`.
